@@ -1,0 +1,53 @@
+{
+    "box001": {
+      "fruit": "Mango",
+      "moisture": "61%",
+      "humidity": "80%",
+      "temperature": "25°C",
+      "pesticide_used": true,
+      "van_temp": "6°C",
+      "retail_shop": "FreshMart - Hyderabad",
+      "blockchain_hash": "0xabc123..."
+    },
+    "box002": {
+      "fruit": "Orange",
+      "moisture": "55%",
+      "humidity": "70%",
+      "temperature": "22°C",
+      "pesticide_used": false,
+      "van_temp": "5°C",
+      "retail_shop": "AgroFresh - Vizag",
+      "blockchain_hash": "0xdef456..."
+    },
+    "box003": {
+      "fruit": "Apple",
+      "moisture": "67%",
+      "humidity": "74%",
+      "temperature": "27°C",
+      "pesticide_used": true,
+      "van_temp": "4°C",
+      "retail_shop": "GreenBasket - Chennai",
+      "blockchain_hash": "0xghi789..."
+    },
+    "box004": {
+      "fruit": "Grapes",
+      "moisture": "59%",
+      "humidity": "68%",
+      "temperature": "23°C",
+      "pesticide_used": false,
+      "van_temp": "6°C",
+      "retail_shop": "FarmFresh - Bangalore",
+      "blockchain_hash": "0xjkl012..."
+    },
+    "box005": {
+      "fruit": "Guava",
+      "moisture": "63%",
+      "humidity": "77%",
+      "temperature": "26°C",
+      "pesticide_used": true,
+      "van_temp": "7°C",
+      "retail_shop": "Nature's Basket - Pune",
+      "blockchain_hash": "0xxyz345..."
+    }
+  }
+  

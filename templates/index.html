@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan QR to View Fruit Details</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan the QR Code Below</h1>
+    <img src="{{ url_for('static', filename='fruit_trace_qr.png') }}" alt="QR Code">
+    <p><strong>Scan me to see the fruit details 🍊🍇🍎</strong></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit Box {{ box_id }} Details</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+        h1 {
+            color: green;
+        }
+        ul {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit Box ID: {{ box_id }}</h1>
+    <ul>
+        <li><strong>Fruit:</strong> {{ info.fruit }}</li>
+        <li><strong>Moisture:</strong> {{ info.moisture }}</li>
+        <li><strong>Humidity:</strong> {{ info.humidity }}</li>
+        <li><strong>Temperature:</strong> {{ info.temperature }}</li>
+        <li><strong>Pesticide Used:</strong> {{ info.pesticide_used }}</li>
+        <li><strong>Van Temperature:</strong> {{ info.van_temp }}</li>
+        <li><strong>Retail Shop:</strong> {{ info.retail_shop }}</li>
+        <li><strong>Blockchain Hash:</strong> {{ info.blockchain_hash }}</li>
+    </ul>
+</body>
+</html>
