@@ -38,12 +38,17 @@ def generate_qr(data_dict, blockchain_hash):
     qr_data = json.dumps(full_payload, indent=2)
 
     # Generate high-quality QR
-    qr = qrcode.QRCode(
-        version=2,
-        box_size=10,
-        border=4
-    )
-    qr.add_data(qr_data)
+   
+    import qrcode
+
+# Generate QR for box001
+    qr = qrcode.QRCode(version=1, box_size=10, border=5)
+    qr.add_data("https://blockchain-fruit-tracker.onrender.com/product/box001")
+    qr.make(fit=True)
+
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save("static/fruit_trace_qr.png")
+
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
 
