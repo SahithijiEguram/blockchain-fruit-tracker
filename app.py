@@ -1,37 +1,30 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, send_from_directory
 import json
+import os
 
 app = Flask(__name__)
 
-# Load the data once at the top
-with open('data/fruits.json') as f:
+# Load fruit data
+with open('data/fruits.json', 'r') as f:
     fruits_data = json.load(f)
 
-# Mapping of hash to box ID
-hash_to_box = {
-    "a5d9ade08c608f8224bf0a5a0a3c13bb1cb3c9bff6fdb0cae77ca807b1ad3d6a": "box001",
-    "another_hash": "box002",
-    # add the rest
-}
+# Route to show homepage with QR code
+@app.route('/')
+def index():
+    return render_template('index.html')  # This page will show the QR code image
 
-@app.route('/product')
-def product():
-    hash_val = request.args.get('id')
-    box_id = hash_to_box.get(hash_val)
-
-    if not box_id:
-        return "Invalid or unknown hash!", 404
-
+# Route to serve product by box ID (for QR link like /product/box001)
+@app.route('/product/<box_id>')
+def product_by_box(box_id):
     info = fruits_data.get(box_id)
-
     if not info:
         return "No data found for this box ID", 404
-
     return render_template('fruit_info.html', box_id=box_id, info=info)
+
+# Optional: to serve QR image from static folder
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory('static', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
